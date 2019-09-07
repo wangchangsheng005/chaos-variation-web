@@ -104,17 +104,32 @@ export default {
           authority: ['admin', 'user'],
           routes: [
             {
-              path: '/',
-              redirect: '/welcome',
+              "path": "/dashboard",
+              "name": "dashboard",
+              "icon": "dashboard",
+              "routes": [
+                {
+                  "path": "/dashboard/analysis",
+                  "name": "analysis",
+                  component: './dashboard/analysis',
+                },
+                {
+                  "path": "/dashboard/monitor",
+                  "name": "monitor",
+                  component: './dashboard/monitor',
+                },
+                {
+                  "path": "/dashboard/workplace",
+                  "name": "workplace",
+                  component: './dashboard/workplace',
+                },
+              ],
             },
             {
-              path: '/welcome',
-              name: 'welcome',
+              path: '/management/UserManagement',
+              name: 'management',
               icon: 'smile',
-              component: './Welcome',
-            },
-            {
-              component: './404',
+              component: './management/UserManagement',
             },
           ],
         },
