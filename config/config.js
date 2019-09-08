@@ -104,33 +104,51 @@ export default {
           authority: ['admin', 'user'],
           routes: [
             {
-              "path": "/dashboard",
-              "name": "dashboard",
-              "icon": "dashboard",
-              "routes": [
+              name: 'account',
+              path: '/account',
+              icon: 'user',
+              routes: [
                 {
-                  "path": "/dashboard/analysis",
-                  "name": "analysis",
+                  name: 'center',
+                  path: '/account/center',
+                  component: './account/center',
+                },
+                {
+                  name: 'settings',
+                  path: '/account/settings',
+                  component: './account/settings',
+                },
+              ],              
+            },
+            {
+              path: '/dashboard',
+              name: 'dashboard',
+              icon: 'dashboard',
+              routes: [
+                {
+                  path: '/dashboard/workplace',
+                  name: 'workplace',
+                  component: './dashboard/workplace',
+                },
+                {
+                  path: '/dashboard/analysis',
+                  name: 'analysis',
                   component: './dashboard/analysis',
                 },
                 {
-                  "path": "/dashboard/monitor",
-                  "name": "monitor",
+                  path: '/dashboard/monitor',
+                  name: 'monitor',
                   component: './dashboard/monitor',
-                },
-                {
-                  "path": "/dashboard/workplace",
-                  "name": "workplace",
-                  component: './dashboard/workplace',
                 },
               ],
             },
             {
               path: '/management/UserManagement',
               name: 'management',
-              icon: 'smile',
+              icon: 'appstore',
               component: './management/UserManagement',
             },
+
           ],
         },
         {

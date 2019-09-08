@@ -9,7 +9,7 @@ import moment from 'moment';
 import Radar from './components/Radar';
 import { ModalState } from './model';
 import EditableLinkGroup from './components/EditableLinkGroup';
-import styles from './style.less';
+const  styles = require('./style.less');
 import { ActivitiesType, CurrentUser, NoticeType, RadarDataType } from './data.d';
 
 const links = [
