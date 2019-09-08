@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Card , Calendar , Button ,Table } from 'antd';
 import { connect } from 'dva';
 
-
+function onPanelChange(value, mode) {
+  console.log(value, mode);
+}
 @connect(({ uManagement, loading }) => ({  // 连接uManagement.js文件
   uManagement,
   loading: loading.models.uManagement,
@@ -27,10 +29,6 @@ export default class PuzzleCardsPage extends Component {
         },
       ],
     }
-    this.onPanelChange = this.onPanelChange.bind(this);
-  }
-  onPanelChange(value, mode) {
-    console.log(value, mode);
   }
   componentDidMount() {
     const { dispatch } = this.props;
