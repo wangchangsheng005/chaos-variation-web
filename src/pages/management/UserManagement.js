@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card , Calendar , Button ,Table } from 'antd';
+import { Card , Calendar , Button ,Table,Alert  } from 'antd';
 import { connect } from 'dva';
 
 function onPanelChange(value, mode) {
@@ -36,6 +36,15 @@ export default class PuzzleCardsPage extends Component {
       type: 'uManagement/queryUserAll',
     });
   }
+
+  ondbButton = event => {
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'uManagement/dbButton',
+    });
+    return (alert(this.props));
+  };
+
   render() {
 
     const columns = [{
@@ -79,7 +88,7 @@ export default class PuzzleCardsPage extends Component {
             columns={columns}
             size="small" />
         </div>
-        <div><Button type="primary" onClick = {this.onPanelChange}>点击</Button></div>
+        <div><Button type="primary"  onClick = {this.ondbButton}>点击</Button></div>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { queryUserAll } from '@/services/uManagement';
+import { queryUserAll, dbButton} from '@/services/uManagement';
 
 export default {
   namespace: 'uManagement',

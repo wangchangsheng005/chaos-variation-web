@@ -10,4 +10,7 @@ const production = [
 
 export default {
   'GET /production/send': production,
+
+  'GET /production/dbButton': [{key:1,name:"张三",age:"女",address:"北京，上海"}],
 }
+
